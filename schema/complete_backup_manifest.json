@@ -1,0 +1,98 @@
+{
+  "generated_at_utc": "2026-11-12 07:47:40 UTC",
+  "backup_file": "autoinspect_complete_backup.sql",
+  "format": "PostgreSQL complete single-file SQL logical export (pg_catalog-generated; not pg_dump -Fc archive)",
+  "generation_method": "pg_catalog logical SQL export (psycopg 3)",
+  "tables_count": 22,
+  "total_rows": 393,
+  "tables": {
+    "users": 0,
+    "profiles": 0,
+    "vehicles": 5,
+    "inspections": 57,
+    "damage_detections": 69,
+    "detected_damages": 2,
+    "detections": 0,
+    "reports": 0,
+    "regions": 0,
+    "id": 0,
+    "damage_detections_backup_20261101": 69,
+    "damage_detections_migration_checkpoint_20261101": 69,
+    "detected_damages_backup_20261101": 2,
+    "detected_damages_migration_checkpoint_20261101": 2,
+    "detections_backup_20261101": 0,
+    "detections_migration_checkpoint_20261101": 0,
+    "inspections_backup_20261101": 56,
+    "inspections_migration_checkpoint_20261101": 56,
+    "reports_backup_20261101": 0,
+    "reports_migration_checkpoint_20261101": 0,
+    "vehicles_backup_20261101": 3,
+    "vehicles_migration_checkpoint_20261101": 3
+  },
+  "sequences_count": 7,
+  "sequences": {
+    "detected_damages_id_seq": {
+      "last_value": 2,
+      "is_called": true,
+      "owned_by": "detected_damages.id"
+    },
+    "detections_id_seq": {
+      "last_value": 1,
+      "is_called": false,
+      "owned_by": "detections.id"
+    },
+    "id_id_seq": {
+      "last_value": 1,
+      "is_called": false,
+      "owned_by": "IDENTITY"
+    },
+    "inspections_id_seq": {
+      "last_value": 56,
+      "is_called": true,
+      "owned_by": "inspections.id"
+    },
+    "reports_id_seq": {
+      "last_value": 1,
+      "is_called": false,
+      "owned_by": "reports.id"
+    },
+    "users_id_seq": {
+      "last_value": 1,
+      "is_called": false,
+      "owned_by": "users.id"
+    },
+    "vehicles_id_seq": {
+      "last_value": 3,
+      "is_called": true,
+      "owned_by": "vehicles.id"
+    }
+  },
+  "constraints": {
+    "total": 25,
+    "primary_and_unique": 13,
+    "check": 3,
+    "foreign_key_public": 8,
+    "foreign_key_external": 1
+  },
+  "indexes": {
+    "total_pg_indexes": 23,
+    "constraint_backing": 13,
+    "standalone": 10
+  },
+  "functions": {
+    "public_user_defined": 4,
+    "revoked_from_public": 4
+  },
+  "triggers": {
+    "public_schema": 1,
+    "external_schema_referencing_public": [
+      "auth.users:on_auth_user_created->handle_new_user()",
+      "auth.users:on_auth_user_email_changed->handle_user_email_change()"
+    ]
+  },
+  "policies": {
+    "total": 29,
+    "auth_dependent_guarded": 22,
+    "non_auth": 7
+  }
+}
